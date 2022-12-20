@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    border-bottom: .15em solid black;
+}
+
+nav ul{
+    display: flex;
+    justify-content: start;
+    gap: 2em;
+}
+
+nav ul:hover li:not(:hover){
+    opacity: 0.4;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header div {
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+}
+
+header div a {
+    border: none;
+    background: none;
+}
+
+header div a:last-child {
+    transition: 1.5s color, 1.5s background;
+    cursor: pointer;
+    border: .1em solid black;
+    padding: .8em 1.5em;
+    border-radius: 1.2em;
+}
+
+header div a:last-child:hover {
+    background: black;
+    color: white;
+}
+
+/* main */
+
+main {
+    padding: 4em 10em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5em;
+}
+
+main article {
+    width: 50%;
+}
+
+main article:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+main article section:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+main article section:first-child h1 {
+    font-size: 4em;
+}
+
+main article section:first-child button {
+    background: none;
+    color: black;
+    border: .2em solid black;
+    width: 100px;
+    padding: .8em;
+    border-radius: 1em;
+}
+
+main article img {
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
