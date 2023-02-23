@@ -1,6 +1,19 @@
+:root {
+    --black: #111;
+    --white: #eee;
+    --background: #fff;
+    --color: #111;
+}
+
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
+    background: var(--background);
+    color: var(--color);
+    transition: 1s all;
 }
 
 header {
@@ -8,7 +21,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1em 2em;
-    border-bottom: .15em solid black;
+    border-bottom: .15em solid var(--black);
 }
 
 nav ul{
@@ -27,7 +40,7 @@ nav ul li {
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--black);
 }
 
 header div {
@@ -44,14 +57,14 @@ header div a {
 header div a:last-child {
     transition: 1.5s color, 1.5s background;
     cursor: pointer;
-    border: .1em solid black;
+    border: .1em solid var(--black);
     padding: .8em 1.5em;
     border-radius: 1.2em;
 }
 
 header div a:last-child:hover {
-    background: black;
-    color: white;
+    background: var(--black);
+    color: var(--white);
 }
 
 /* main */
@@ -87,11 +100,18 @@ main article section:first-child h1 {
 
 main article section:first-child button {
     background: none;
-    color: black;
-    border: .2em solid black;
+    color: var(--black);
+    border: .2em solid var(--black);
     width: 100px;
     padding: .8em;
     border-radius: 1em;
+    cursor: pointer;
+    transition: 1s ease all;
+}
+
+.more:hover {
+    background: black;
+    color: white;
 }
 
 main article img {
@@ -102,4 +122,84 @@ footer {
     display: flex;
     justify-content: center;
     padding: 1em;
+}
+
+.dark {
+    background: #343D5B;
+    color: #fff;
+    position: relative;
+    display: flex;
+    /*background: none;
+    /*border: none;*/
+    cursor: pointer;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    transition: 1s ease all;
+}
+
+.dark::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #f1f1f1;
+    border-radius: 100px;
+    top: 0;
+    left: 0;
+    right: unset;
+    transition: all 1s ease;
+}
+
+.dark span {
+    display: block;
+    background: none;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.active.dark::after {
+    left: unset;
+    right: 0;
+    background: #343D5B;
+}
+
+.active.dark {
+    background: white;
+    color: yellow;
+}
+
+.darkMode {
+    background: black;
+    color: white;
+    transition: 1s all;
+}
+
+.darkMode header div a{
+    color: white;
+}
+
+.darkMode header div a:last-child {
+    border-color: white;
+}
+
+.darkMode header nav ul li a{
+    color: white;
+}
+
+.darkMode header {
+    border-bottom: white solid .15em;
+}
+ 
+.darkMode .more {
+    background: none;
+    color: white;
+    border: white solid .15em;
+}
+
+.darkMode .more:hover {
+    background: white;
+    color: black;
 }

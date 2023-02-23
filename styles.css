@@ -1,5 +1,7 @@
 :root {
     --background: #eae3ee;
+    --background-dark: ;
+    --primary-dark: #3d3a41;
     --primary: #EFEDF4;
     --secondary: #d397fe;
     --red-light: #f56965;
@@ -17,6 +19,15 @@ main {
     align-items: center;
     height: 100vh;
     box-shadow: 5px black;
+}
+
+.imgMoon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    padding: .2em .8em;
+    cursor: pointer;
 }
 
 article {
@@ -67,8 +78,13 @@ section:last-child div:first-child {
     gap: 1em;
 }
 
+
 article section:last-child div:nth-child(2) {
     width: 70%;
+}
+
+article section:last-child div:nth-child(2) span {
+    align-self: end;
 }
 
 article section:last-child form {
@@ -76,6 +92,7 @@ article section:last-child form {
     display: flex;
     flex-direction: column;
     gap: .8em;
+    align-items: center;
 }
 
 form span {
@@ -86,6 +103,7 @@ form input {
     border: none;
     padding: 1em;
     border-radius: .8em;
+    width: 100%;
 }
 
 form a {
@@ -142,3 +160,27 @@ section:last-child div:last-child {
 
 section:last-child div:last-child img{
     width: 30px;
+}
+
+.darkMode main{
+    background: #444e;
+}
+
+.darkMode article {
+    background: linear-gradient(to right, black, var(--primary-dark));
+    border: black solid .2em;
+    color: white;
+}
+
+.darkMode article section form input {
+    background: #444;
+    color: white;
+}
+
+.darkMode article section form input::placeholder {
+    color: white;
+}
+
+.darkMode article section form input:focus {
+    outline: white solid .1em;
+}

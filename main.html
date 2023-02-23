@@ -3,11 +3,12 @@
     <head>
         <title>Webside - FlexBox</title>
         <meta charset="UTF-8">
-        <meta name="viewport">
+        <meta name="viewport" content="width=device-Width">
         <link rel="stylesheet" href="main.css">
+        <script src="https://kit.fontawesome.com/6f13d50f2a.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header>
+        <header class="header">
             <div>
                 <h2>Im-Jota</h1>
             </div>
@@ -20,6 +21,10 @@
                 </ul>
             </nav>
             <div>
+                <button id="dark" class="dark">
+                    <span><i class="fa-solid fa-sun"></i></span>
+                    <span><i class="fa-solid fa-moon"></i></span>
+                </button>
                 <a href="index.html">Login</a>
                 <a href="index.html">Register</a>
             </div>
@@ -29,7 +34,7 @@
                 <section>
                     <h1>Make<br>remote work</h1>
                     <p>Get your team sync, no matter your location.<br>Streamline proccesses, create team  rituals, and<br>watch productivity soar.</p>
-                    <button>Learn More</button>
+                    <button class="more">Learn More</button>
                 </section>
                 <!--
                 <section>
@@ -47,5 +52,8 @@
         <footer>
             <p>Jose Luis Romero Arce - 2022</p>
         </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>
